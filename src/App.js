@@ -87,7 +87,7 @@ const App = () => {
   return (
     <div>
       <h1 className="title">BD Store</h1>
-      <Products  />
+      {products.map((p,index)=> <Products key={p.id}  title={p.title} price={p.price} description={p.description} category={p.category} image={p.image} rate={p.rating[0]} />)}
     </div>
   );
 };
